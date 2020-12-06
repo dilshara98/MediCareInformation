@@ -49,4 +49,5 @@ class PharmacistController extends Controller
         return view('viewpharma')->with('pharmacistdetails',$updatepharmacistdetails);
     }
     
+    
 }

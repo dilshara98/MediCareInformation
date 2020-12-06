@@ -84,7 +84,7 @@
     
     
     <div class="main">
-      <u><h5 style="padding-left: 7cm; padding-bottom: 0.01cm; padding-top: 0.01cm;">Add Patient-Patient Details</h5></u>
+      <u><h5 style="padding-left: 7cm; padding-bottom: 0.01cm; padding-top: 0.01cm;">Add Patient  Details</h5></u>
     <form action="/svpatient" method="POST">
     @csrf
           
@@ -152,7 +152,8 @@
             
             <div class="form-group">
                 <h2 class="name">Blood Group</h2>
-                <select name="pblood"  class="form-control @error('pblood') is-invalid @enderror"value="{{ old('pblood') }}" required autocomplete="pblood">      
+                <select name="pblood"  class="form-control" >   
+                <option value="" >--select--</option>
                 <option value="A+">A+</option>
                 <option value="A-">A-</option>
                 <option value="B+">B+</option>
@@ -161,12 +162,7 @@
                 <option value="O-">O-</option>
                 <option value="AB+">AB+</option>
                 <option value="AB-">AB-</option>
-                </select>
-                @error('pblood')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
+                </select> 
             </div>
         
             <div class="form-group">

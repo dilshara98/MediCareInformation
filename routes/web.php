@@ -58,10 +58,10 @@ Route::get('/addpatient', function () {
 
 Route::post('/svpatient','PatientController@patient');
 
-Route::get('/viewpatient', function () {
-    return view('viewpatient');
-});
-
+Route::get('/viewpatients','PatientController@patientsdetails');
+Route::get('/viewpatient/{id}','PatientController@patientdetail');
+Route::post('/updatepatient','PatientController@updatepatient');
+Route::get('/deletepatient/{id}','PatientController@delete');
 
 Route::get('/addpharma', function () {
     return view('addpharma');

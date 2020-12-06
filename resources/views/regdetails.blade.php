@@ -12,7 +12,15 @@
     }
 </style>
 
-<div class="first" style="background-image: url('https://image.freepik.com/free-photo/female-doctor-working-medicine-specialist_144627-30292.jpg');">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container" style="padding-left:20cm;">
+        <form class="form-inline" action="/searchpharma" >
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" >
+        <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </div>     
+</nav>
+<div class="first" style="background-image: url('https://image.freepik.com/free-photo/female-doctor-working-medicine-specialist_144627-30292.jpg'); height:434px;">
 
 <div class="container">
 <table class="table table-dark">

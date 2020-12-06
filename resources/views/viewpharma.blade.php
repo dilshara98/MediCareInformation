@@ -12,10 +12,19 @@
         border-width: 1cm;
     }
 </style>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container" style="padding-left:20cm;">
+        <form class="form-inline" action="/searchpharma" >
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" >
+        <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </div>     
+</nav>
+<div class="first" style="background-image: url('https://image.freepik.com/free-photo/hands-holding-paper-family-cutout-with-stethoscope_63176-1186.jpg');height:434px; ">
 
-<div class="first" style="background-image: url('https://image.freepik.com/free-photo/hands-holding-paper-family-cutout-with-stethoscope_63176-1186.jpg');">
 
-<div class="container">
+    
+    <div class="container">  
 <table class="table table-light">
     <th>ID</th>
     <th>Name</th>

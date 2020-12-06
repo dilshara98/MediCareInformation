@@ -120,7 +120,7 @@
                                     
                                             <a class="dropdown-item" href="{{ url('/addpatient') }}">Add Patient</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="{{ url('/viewpatient') }}">View Patient</a>
+                                            <a class="dropdown-item" href="{{ url('/viewpatients') }}">View Patient</a>
                                             
                                         </div>
                                         </li>

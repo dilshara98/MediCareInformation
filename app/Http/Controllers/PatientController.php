@@ -26,6 +26,53 @@ class PatientController extends Controller
         $patient->save();
         return redirect()->back();
     }
+
+    public function patientsdetails(){
+        $patientdetails=Patient::all();
+        return view('viewpatient')->with('patientdetails',$patientdetails);
+    }
+
+    public function patientdetail($id){
+        $patientdetail=Patient::find($id);
+        return view('viewupdatedeletepatient')->with('item', $patientdetail);
+    }
+
+
+    public function updatepatient(Request $request){
+        $id=$request->id;
+        $pname = $request->pname;
+        $pemail = $request->pemail;
+        $pphone = $request->pphone;
+        $paddress = $request->paddress;
+        $pbday = $request->pbday;
+        $poccupation = $request->poccupation;
+        $pblood = $request->pblood;
+        $palmedicine = $request->palmedicine;
+        $pgender = $request->pgender;
+        $pstatus = $request->pstatus;
+
+        $updatepatient=Patient::find($id);
+        $updatepatient->pname=$pname;
+        $updatepatient->pemail=$pemail;
+        $updatepatient->pphone=$pphone;
+        $updatepatient->paddress=$paddress;
+        $updatepatient->pbday=$pbday;
+        $updatepatient->poccupation=$poccupation;
+        $updatepatient->pblood=$pblood;
+        $updatepatient->palmedicine=$palmedicine;
+        $updatepatient->pgender=$pgender;
+        $updatepatient->pstatus=$pstatus;
+        $updatepatient->save();
+
+        $updatepatientdetails=Patient::all();
+        return view('viewpatient')->with('patientdetails',$updatepatientdetails);
+    }
+
+    public function delete($id){
+        $item=Patient::find($id);
+        $item->delete();
+        return redirect()->back();
+    }
 }
 
 
